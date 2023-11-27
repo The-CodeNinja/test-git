@@ -2,353 +2,436 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FindUtsav: Your Gateway to Medical Opportunities</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        /* CSS style for your website */
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>FindUtsav</title>
+    <link rel="icon" type="image/x-icon" href="https://findutsav.com/assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="https://findutsav.com/css/styles.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-        /* Define some variables for colors and fonts */
-        :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --light-color: #ecf0f1;
-            --dark-color: #34495e;
-            --font-family: 'Arial', sans-serif;
-        }
+    <meta property="og:title" content="A community to find and share events" />
+    <meta property="og:site_name" content="A community to find and share events" />
+    <meta property="og:url" content="/competitions.htm" />
+    <meta property="og:description" content="FindUtsav| A community to find and share events" />
+    <meta property="og:type" content="event data" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
 
-        /* Reset some default styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta property="og:image" content="https://findutsav.com/assets/favicon.ico" />
+    <meta property="twitter:image" content="https://findutsav.com/assets/favicon.ico" />
 
-        /* Style the top bar menu */
-        .menu {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: var(--dark-color);
-            color: var(--light-color);
-            font-family: var(--font-family);
-            padding: 10px;
-        }
 
-        /* Style the menu logo */
-        .menu-logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--light-color);
-            text-decoration: none;
-        }
 
-        /* Style the menu links */
-        .menu-links {
-            display: flex;
-            list-style: none;
-        }
+                <meta property="twitter:card" content="summary" />
+                <meta property="twitter:title" content="FindUtsav| A community to find and share events" />
+                <meta property="twitter:site" content="FindUtsav| A community to find and share events" />
+                <meta property="twitter:description" content="FindUtsav| A community to find and share events" />
 
-        /* Style the menu link items */
-        .menu-link {
-            margin: 0 10px;
-        }
-
-        /* Style the menu link anchors */
-        .menu-link a {
-            color: var(--light-color);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        /* Style the menu link anchors on hover */
-        .menu-link a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Style the menu toggle button */
-        .menu-toggle {
-            display: none;
-            cursor: pointer;
-            color: var(--light-color);
-        }
-
-        /* Style the menu toggle button icon */
-        .menu-toggle i {
-            font-size: 24px;
-        }
-
-        /* Style the hero section */
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 80vh;
-            background-image: url("https://images.unsplash.com/photo-1508615070457-7baeba4003e4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWVkaWNhbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-            background-size: cover;
-            background-position: center;
-            color: var(--light-color);
-            font-family: var(--font-family);
-            text-align: center;
-        }
-
-        /* Style the hero content */
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Style the hero title */
-        .hero-title {
-            font-size: 3em;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: var(--light-color);
-        }
-
-        /* Style the hero subtitle */
-        .hero-subtitle {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            color: var(--light-color);
-        }
-
-        /* Style the hero button */
-        .hero-button {
-            display: inline-block;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: var(--primary-color);
-            color: var(--light-color);
-            font-size: 1em;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-
-        /* Style the hero button on hover */
-        .hero-button:hover {
-            background-color: var(--secondary-color);
-        }
-
-        /* Style the features section */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            background-color: var(--light-color);
-            font-family: var(--font-family);
-            opacity: 0;
-            animation: fadeIn 1s forwards;
-        }
-
-        /* Define fade-in animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Style the feature cards */
-        .feature-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 300px;
-            background-color: var(--dark-color);
-            border: 2px solid var(--primary-color);
-            border-radius: 10px;
-            transition: transform 0.3s;
-            overflow: hidden;
-        }
-
-        /* Style the feature cards on hover */
-        .feature-card:hover {
-            transform: scale(1.05);
-        }
-
-        /* Style the feature icons */
-        .feature-icon {
-            font-size: 48px;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-
-        /* Style the feature titles */
-        .feature-title {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: var(--light-color);
-        }
-
-        /* Style the feature descriptions */
-        .feature-description {
-            font-size: 1em;
-            text-align: center;
-            color: var(--light-color);
-        }
-
-        /* Use media queries to make the website responsive */
-
-        /* For small screens (max-width: 768px) */
-        @media screen and (max-width: 768px) {
-            /* Hide the menu links and show the menu toggle button */
-            .menu-links {
-                display: none;
-                flex-direction: column;
-                background-color: var(--dark-color);
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                z-index: 1;
-            }
-
-            .menu-links.show {
-                display: flex;
-            }
-
-            .menu-link {
-                margin: 10px;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            /* Make the hero section smaller */
-            .hero {
-                height: 60vh;
-            }
-
-            /* Make the hero title and subtitle smaller */
-            .hero-title {
-                font-size: 2em;
-            }
-
-            .hero-subtitle {
-                font-size: 1em;
-            }
-
-            /* Make the features section a single column */
-            .features {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 
-<body>
-    <!-- HTML structure for your website -->
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
+        <div class="container px-3">
+            <a class="navbar-brand fw-bold" href="https://findutsav.com/#page-top">
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg width="200" height="50" viewBox="0 0 1709 352" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- <svg width="1709" height="352" viewBox="0 0 1709 352" fill="none" xmlns="http://www.w3.org/2000/svg"> -->
+                    <mask id="mask0_409:238" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="8" y="3" width="1655"
+                        height="346">
+                        <path
+                            d="M268.932 141.516C269.146 129.707 259.49 119.756 247.11 119.53C234.73 119.305 224.718 128.899 224.503 140.708C224.288 152.517 233.945 162.468 246.325 162.693C258.705 162.918 268.717 153.325 268.932 141.516Z"
+                            stroke="white" stroke-width="10"></path>
+                        <line x1="5" y1="-5" x2="103.511" y2="-5"
+                            transform="matrix(0.999962 -0.00875126 -0.00875103 -0.999962 264.391 136.2)" stroke="white"
+                            stroke-width="10" stroke-linecap="round"></line>
+                        <line x1="5" y1="-5" x2="23.9363" y2="-5"
+                            transform="matrix(0.0205436 0.999789 0.999789 -0.0205445 343.951 141.525)" stroke="white"
+                            stroke-width="10" stroke-linecap="round"></line>
+                        <line x1="5" y1="-5" x2="23.9363" y2="-5"
+                            transform="matrix(0.0205444 0.999789 0.999789 -0.0205438 364.204 141.217)" stroke="white"
+                            stroke-width="10" stroke-linecap="round"></line>
+                        <path
+                            d="M191.305 229.033C202.98 240.708 221.908 240.708 233.582 229.033C245.257 217.359 245.257 198.431 233.582 186.756C221.908 175.082 202.98 175.082 191.305 186.756C179.631 198.431 179.631 217.359 191.305 229.033Z"
+                            stroke="white" stroke-width="20"></path>
+                        <line x1="10.5" y1="-10.5" x2="131.287" y2="-10.5"
+                            transform="matrix(0.712355 0.701819 0.702876 -0.711312 232.406 214.44)" stroke="white"
+                            stroke-width="21" stroke-linecap="round" stroke-linejoin="round"></line>
+                        <path
+                            d="M132.67 14C69.8917 14 18.9999 64.8918 18.9999 127.67C18.9999 190.448 69.8917 241.34 132.67 241.34C195.448 241.34 246.34 190.448 246.34 127.67C246.34 64.8918 195.448 14 132.67 14Z"
+                            stroke="white" stroke-width="22"></path>
+                        <mask id="mask1_409:238" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="278" y="296"
+                            width="37" height="45">
+                            <path
+                                d="M284.135 311.176C276.256 319.162 277.808 330.795 284.135 340.785L314.056 310.864L299.095 296.402L284.135 311.176Z"
+                                fill="#C4C4C4"></path>
+                        </mask>
+                        <g mask="url(#mask1_409:238)">
+                            <line x1="283.576" y1="325.131" x2="298.347" y2="310.36" stroke="white" stroke-width="21"
+                                stroke-linecap="square"></line>
+                        </g>
+                        <mask id="mask2_409:238" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="241" y="268"
+                            width="45" height="36">
+                            <path
+                                d="M270.991 298.218C263.006 306.097 251.372 304.545 241.382 298.218L271.303 268.298L285.765 283.258L270.991 298.218Z"
+                                fill="#C4C4C4"></path>
+                        </mask>
+                        <g mask="url(#mask2_409:238)">
+                            <line x1="10.5" y1="-10.5" x2="31.3891" y2="-10.5"
+                                transform="matrix(0.707107 -0.707106 0.707107 0.707106 254.348 313.875)" stroke="white"
+                                stroke-width="21" stroke-linecap="square"></line>
+                        </g>
+                        <path
+                            d="M403.2 68H527.4V92.6H441V162.2H508.8V186.5H441V287H407.4V87.2L403.2 68ZM594.53 86C594.53 91.6 592.53 96.4 588.53 100.4C584.73 104.4 580.03 106.4 574.43 106.4C568.83 106.4 564.03 104.4 560.03 100.4C556.23 96.4 554.33 91.6 554.33 86C554.33 80.6 556.23 75.9 560.03 71.9C564.03 67.9 568.83 65.9 574.43 65.9C579.83 65.9 584.53 67.9 588.53 71.9C592.53 75.9 594.53 80.6 594.53 86ZM589.43 137.9V287H559.73V155L556.13 137.9H589.43ZM657.523 135.2C660.323 141.6 662.123 148.4 662.923 155.6C668.923 149.8 675.923 144.8 683.923 140.6C692.123 136.2 700.523 134 709.123 134C720.323 134 729.223 136.3 735.823 140.9C742.423 145.3 747.123 151.5 749.923 159.5C752.723 167.5 754.123 176.6 754.123 186.8V287H724.723V193.1C724.723 187.5 724.323 182.1 723.523 176.9C722.723 171.7 720.723 167.4 717.523 164C714.323 160.6 709.223 158.9 702.223 158.9C696.023 158.9 689.323 160.9 682.123 164.9C674.923 168.9 669.123 173 664.723 177.2V287H635.323V180.8C635.323 177 635.023 172.5 634.423 167.3C634.023 161.9 633.123 156.7 631.723 151.7C630.323 146.5 628.323 142.3 625.723 139.1L657.523 135.2ZM855.485 134.6C861.685 134.6 868.085 135.6 874.685 137.6C881.285 139.4 886.885 142.3 891.485 146.3C891.485 143.1 891.385 140.2 891.185 137.6C891.185 135 891.185 132.2 891.185 129.2V74.6L886.685 57.5H920.585V244.1C920.585 250.3 921.185 257.5 922.385 265.7C923.785 273.9 925.985 280.8 928.985 286.4L898.385 289.7C897.185 286.5 896.185 283.3 895.385 280.1C894.585 276.9 893.885 273.6 893.285 270.2C888.485 276.8 882.085 281.9 874.085 285.5C866.285 289.1 858.385 290.9 850.385 290.9C839.785 290.9 830.485 288.7 822.485 284.3C814.685 279.7 808.185 273.7 802.985 266.3C797.985 258.9 794.185 250.7 791.585 241.7C788.985 232.5 787.685 223.2 787.685 213.8C787.685 199.8 790.185 186.8 795.185 174.8C800.185 162.8 807.685 153.1 817.685 145.7C827.685 138.3 840.285 134.6 855.485 134.6ZM857.285 157.1C849.885 157.1 843.685 158.8 838.685 162.2C833.885 165.6 830.085 170.1 827.285 175.7C824.485 181.1 822.485 187 821.285 193.4C820.085 199.8 819.485 206 819.485 212C819.485 220.2 820.685 228.6 823.085 237.2C825.685 245.6 829.785 252.7 835.385 258.5C841.185 264.1 849.085 266.9 859.085 266.9C865.285 266.9 871.185 265.1 876.785 261.5C882.585 257.9 887.385 253.7 891.185 248.9V199.1C891.185 191.7 890.085 184.8 887.885 178.4C885.685 172 882.085 166.9 877.085 163.1C872.085 159.1 865.485 157.1 857.285 157.1ZM1001.47 68V213.8C1001.47 229.8 1005.77 242.6 1014.37 252.2C1022.97 261.8 1035.47 266.6 1051.87 266.6C1068.87 266.6 1081.97 261.6 1091.17 251.6C1100.37 241.4 1104.97 227.9 1104.97 211.1V68H1132.57V207.2C1132.57 235 1124.97 255.9 1109.77 269.9C1094.77 283.7 1074.67 290.6 1049.47 290.6C1023.27 290.6 1002.97 283.7 988.57 269.9C974.17 255.9 966.97 235.8 966.97 209.6V87.2L962.47 68H1001.47ZM1218.08 95C1216.68 101.8 1215.38 108.9 1214.18 116.3C1213.18 123.7 1212.58 130.9 1212.38 137.9H1250.18L1245.08 158.9H1212.38V248.9C1212.38 253.7 1213.18 258.1 1214.78 262.1C1216.58 266.1 1220.68 268.1 1227.08 268.1C1230.28 268.1 1233.48 267.8 1236.68 267.2C1239.88 266.6 1242.98 265.9 1245.98 265.1L1250.18 284.3C1245.18 285.9 1239.98 287.3 1234.58 288.5C1229.18 289.7 1223.68 290.3 1218.08 290.3C1205.28 290.3 1196.18 287.1 1190.78 280.7C1185.38 274.1 1182.68 264.5 1182.68 251.9V158.9H1159.28V141.8C1167.48 141.6 1174.08 139 1179.08 134C1184.08 128.8 1187.98 122.6 1190.78 115.4C1193.58 108.2 1195.58 101.4 1196.78 95H1218.08ZM1326.42 134.3C1333.22 134.3 1340.22 135.1 1347.42 136.7C1354.82 138.3 1361.52 140.8 1367.52 144.2L1357.02 165.8C1352.82 162.4 1348.02 159.8 1342.62 158C1337.42 156.2 1332.22 155.3 1327.02 155.3C1320.62 155.3 1314.92 156.8 1309.92 159.8C1304.92 162.8 1302.42 167.5 1302.42 173.9C1302.42 180.3 1304.62 185.1 1309.02 188.3C1313.42 191.5 1318.72 194.5 1324.92 197.3C1331.52 200.3 1338.22 203.5 1345.02 206.9C1351.82 210.3 1357.52 214.9 1362.12 220.7C1366.92 226.5 1369.32 234.4 1369.32 244.4C1369.32 254.8 1366.72 263.5 1361.52 270.5C1356.32 277.3 1349.52 282.4 1341.12 285.8C1332.92 289.2 1324.02 290.9 1314.42 290.9C1306.42 290.9 1298.12 289.8 1289.52 287.6C1281.12 285.4 1273.52 282.3 1266.72 278.3L1278.12 257.3C1283.12 260.7 1288.52 263.6 1294.32 266C1300.12 268.2 1306.02 269.3 1312.02 269.3C1319.02 269.3 1325.02 267.6 1330.02 264.2C1335.22 260.8 1337.82 255.7 1337.82 248.9C1337.82 241.7 1334.82 236.3 1328.82 232.7C1323.02 229.1 1316.42 225.7 1309.02 222.5C1303.02 219.7 1297.12 216.7 1291.32 213.5C1285.52 210.1 1280.72 205.7 1276.92 200.3C1273.12 194.9 1271.22 187.8 1271.22 179C1271.22 169 1273.82 160.7 1279.02 154.1C1284.42 147.5 1291.32 142.6 1299.72 139.4C1308.32 136 1317.22 134.3 1326.42 134.3ZM1458.63 134.3C1474.43 134.3 1486.53 138.5 1494.93 146.9C1503.33 155.3 1507.53 167.4 1507.53 183.2V254.3C1507.53 259.1 1508.33 262.4 1509.93 264.2C1511.53 265.8 1513.63 266.6 1516.23 266.6C1518.03 266.6 1519.93 266.4 1521.93 266C1523.93 265.4 1525.83 264.7 1527.63 263.9L1533.33 281.9C1529.53 284.1 1525.03 285.9 1519.83 287.3C1514.83 288.9 1509.83 289.7 1504.83 289.7C1498.63 289.7 1493.43 288.2 1489.23 285.2C1485.03 282.2 1482.23 276.9 1480.83 269.3C1469.03 283.3 1454.03 290.3 1435.83 290.3C1424.03 290.3 1414.13 286.9 1406.13 280.1C1398.13 273.3 1394.13 263.7 1394.13 251.3C1394.13 240.3 1396.83 231.4 1402.23 224.6C1407.63 217.6 1414.53 212.4 1422.93 209C1431.53 205.4 1440.63 203 1450.23 201.8C1460.03 200.4 1469.23 199.7 1477.83 199.7V182.3C1477.83 174.1 1476.13 167.7 1472.73 163.1C1469.33 158.5 1463.23 156.2 1454.43 156.2C1447.03 156.2 1439.93 157.9 1433.13 161.3C1426.33 164.5 1419.73 168.6 1413.33 173.6L1400.13 153.5C1408.73 147.1 1417.93 142.3 1427.73 139.1C1437.73 135.9 1448.03 134.3 1458.63 134.3ZM1477.83 221.3C1473.03 221.3 1467.53 221.6 1461.33 222.2C1455.33 222.6 1449.53 223.7 1443.93 225.5C1438.33 227.1 1433.73 229.8 1430.13 233.6C1426.53 237.4 1424.73 242.6 1424.73 249.2C1424.73 255 1426.73 259.4 1430.73 262.4C1434.93 265.2 1439.93 266.6 1445.73 266.6C1452.13 266.6 1457.73 264.8 1462.53 261.2C1467.33 257.4 1471.03 252.7 1473.63 247.1C1476.43 241.5 1477.83 235.7 1477.83 229.7V221.3ZM1560.76 137.9L1591.06 224.6C1592.46 228.4 1593.66 232.3 1594.66 236.3C1595.86 240.1 1597.06 244.3 1598.26 248.9C1599.26 244.5 1600.16 240.4 1600.96 236.6C1601.96 232.6 1603.06 228.8 1604.26 225.2L1634.86 137.9H1662.16L1609.06 288.5H1582.06L1529.26 137.9H1560.76Z"
+                            fill="white"></path>
+                    </mask>
+                    <g mask="url(#mask0_409:238)">
+                        <rect x="8" width="1768" height="352" fill="url(#paint0_linear_409:238)"></rect>
+                    </g>
+                    <defs>
+                        <linearGradient id="paint0_linear_409:238" x1="517.735" y1="202.559" x2="536.388" y2="-41.963"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#7630E8"></stop>
+                            <stop offset="1" stop-color="#6BD3FF"></stop>
+                        </linearGradient>
+                    </defs>
 
-    <!-- Top bar menu -->
-    <div class="menu">
-        <!-- Menu logo -->
-        <a href="#" class="menu-logo">FindUtsav</a>
-        <!-- Menu links -->
-        <ul class="menu-links">
-            <li class="menu-link"><a href="#">Home</a></li>
-            <li class="menu-link"><a href="#">About</a></li>
-            <li class="menu-link"><a href="#">Events</a></li>
-            <li class="menu-link"><a href="#">Competitions</a></li>
-            <li class="menu-link"><a href="#">Contact</a></li>
-        </ul>
-        <!-- Menu toggle button -->
-        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+                </svg>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse flex-row flex-wrap bd-navbar-nav pt-2 py-md-0" id="navbarResponsive">
+
+                <a class="nav-item nav-link" href="https://findutsav.com/#about">
+                    <span class="d-flex align-items-center">
+                        <span class="small nav-link">About Us</span>
+                    </span>
+                </a>
+
+                <a class="nav-item nav-link" href="https://findutsav.com/#download">
+                    <span class="d-flex align-items-center">
+                        <span class="small nav-link">Join Community</span>
+                    </span>
+                </a>
+                <button class="nav-item nav btn nav-link" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                    <span class="d-flex align-items-center">
+                        <span class="small">Contact Us</span>
+                    </span>
+                </button>
+                <a class="nav-item btn btn-primary rounded-pill px-3 mb-2 mb-lg-0"
+                    href="https://play.google.com/store/apps/details?id=com.findutsav">
+                    <span class="d-flex align-items-center">
+                        <span class="small fw-bold">Get App</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Mashead header-->
+<header class="masthead">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-10">
+
+                <!-- Mashead text and app badges-->
+
+                <div class="mb-5 mb-lg-0 text-center text-lg-start">
+                    <h2 class="display-3 lh-1 mb-3 animate-charcter">Where Talent Meets Opportunities</h2>
+                    <p class="lead fw-normal text-muted mb-5">No more waiting for the events to arrive at your
+                        college
+                        groups. Get best of the Opportunities, right at your fingertips.</p>
+                    <div class="d-flex flex-column flex-lg-row align-items-center">
+                        <a class="me-lg-3 mb-4 mb-lg-0"
+                            href="https://play.google.com/store/apps/details?id=com.findutsav"><img class="app-badge"
+                                src="https://findutsav.com/assets/img/google-play-badge.svg" alt="..." /></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
     </div>
-
-    <!-- Hero section -->
-    <div class="hero">
-        <!-- Hero content -->
-        <div class="hero-content">
-            <!-- Hero title -->
-            <h1 class="hero-title">Your Gateway to Medical Opportunities!</h1>
-            <!-- Hero subtitle -->
-            <p class="hero-subtitle">Embark on a journey of discovery and excellence with FindUtsav, the ultimate community platform designed exclusively for medical students like you. Uncover a world of opportunities, events, and competitions that will shape your medical career and beyond.</p>
-            <!-- Hero button -->
-            <a href="#" class="hero-button">Join Now</a>
+</header>
+<!-- Quote/testimonial aside-->
+<aside class="text-center bg-gradient-primary-to-secondary">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-xl-8 section2Container">
+                <div class="h2 fs-1 text-white mb-4 section2">
+                    <p> Who is it for?</p>
+                    <p>For every student that craves for amazing
+                        seminars, competitions, events.</p>
+                    <p>For every organiser who wants to reach specific target audiance</p>
+                </div>
+                <!-- <img src="assets/img/tnw-logo.svg" alt="..." style="height: 3rem" /> -->
+            </div>
         </div>
     </div>
+</aside>
+<!-- App features section-->
+<section id="features">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
 
-    <!-- Features section -->
-    <div class="features">
-        <!-- Feature card 1 -->
-        <div class="feature-card">
-            <!-- Feature icon 1 -->
-            <i class="fas fa-search feature-icon"></i>
-            <!-- Feature title 1 -->
-            <h3 class="feature-title">Find Opportunities Here</h3>
-            <!-- Feature description 1 -->
-            <p class="feature-description">Our tagline says it all. FindUtsav is your dedicated space for discovering a myriad of opportunities that align with your medical ambitions. From events that broaden your horizons to competitions that showcase your skills, every opportunity awaits you here.</p>
-        </div>
-        <!-- Feature card 2 -->
-        <div class="feature-card">
-            <!-- Feature icon 2 -->
-            <i class="fas fa-users feature-icon"></i>
-            <!-- Feature title 2 -->
-            <h3 class="feature-title">Connect and Collaborate</h3>
-            <!-- Feature description 2 -->
-            <p class="feature-description">Join a thriving community of medical students who share your passion and drive. Forge connections, engage in meaningful discussions, and collaborate on projects that have the potential to transform the medical landscape.</p>
-        </div>
-        <!-- Feature card 3 -->
-        <div class="feature-card">
-            <!-- Feature icon 3 -->
-            <i class="fas fa-calendar feature-icon"></i>
-            <!-- Feature title 3 -->
-            <h3 class="feature-title">Events Tailored to You</h3>
-            <!-- Feature description 3 -->
-            <p class="feature-description">Discover a curated selection of events that cater to your interests and aspirations. Whether it's cutting-edge research, clinical advancements, or skill-building workshops, FindUtsav ensures you're always in the know.</p>
-        </div>
-        <!-- Feature card 4 -->
-        <div class="feature-card">
-            <!-- Feature icon 4 -->
-            <i class="fas fa-trophy feature-icon"></i>
-            <!-- Feature title 4 -->
-            <h3 class="feature-title">Showcase Your Excellence</h3>
-            <!-- Feature description 4 -->
-            <p class="feature-description">Compete and shine on a global stage. FindUtsav hosts a variety of medical competitions that allow you to demonstrate your expertise, innovate, and stand out among your peers.</p>
-        </div>
-        <!-- Feature card 5 -->
-        <div class="feature-card">
-            <!-- Feature icon 5 -->
-            <i class="fas fa-globe feature-icon"></i>
-            <!-- Feature title 5 -->
-            <h3 class="feature-title">Global Community, Local Impact</h3>
-            <!-- Feature description 5 -->
-            <p class="feature-description">Break free from geographical constraints. Connect with medical students from around the world, enriching your perspective and building a global network that extends beyond your medical school.</p>
-        </div>
-        <!-- Feature card 6 -->
-        <div class="feature-card">
-            <!-- Feature icon 6 -->
-            <i class="fas fa-search-plus feature-icon"></i>
-            <!-- Feature title 6 -->
-            <h3 class="feature-title">Smart Recommendations</h3>
-            <!-- Feature description 6 -->
-            <p class="feature-description">Personalized opportunities at your fingertips. FindUtsav's intelligent algorithms understand your preferences, ensuring that you receive tailored recommendations for events and competitions that matter to you.</p>
+            <div class="order-lg-1 mb-5 mb-lg-0">
+                <div class="container-fluid px-5">
+                    <div class="row gx-5 justify-content-around">
+                        <div class="col-md-5 mb-5 features-tab" onmouseover="bringUp(this)"
+                            onmouseout="bringDown(this)">
+                            <!-- Feature item-->
+                            <div class="text-center">
+                                <i class="bi-layout-wtf icon-feature text-gradient d-block mb-3"></i>
+                                <h3 class="font-alt">Cherry-picked events</h3>
+                                <p class="text-muted mb-0">No more scrolling through huge boring messages just to
+                                    find that
+                                    one event that's right for you</p>
+
+                                <p class="text-muted mb-0">We give you events that match your interests and need
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-5 mb-5  features-tab" onmouseover="bringUp(this)"
+                            onmouseout="bringDown(this)">
+                            <!-- Feature item-->
+                            <div class="text-center">
+                                <i class="bi-search icon-feature text-gradient d-block mb-3"></i>
+                                <h3 class="font-alt">Powerful</h3>
+                                <p class="text-muted mb-0">Smartly filter through tons of events to search exactly
+                                    what you
+                                    are looking for</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-around">
+                        <div class="col-md-5 mb-5 mb-md-0 features-tab" onmouseover="bringUp(this)"
+                            onmouseout="bringDown(this)">
+                            <!-- Feature item-->
+                            <div class="text-center">
+                                <i class="bi-people icon-feature text-gradient d-block mb-3"></i>
+                                <h3 class="font-alt">Find amazing people</h3>
+                                <p class="text-muted mb-0">Follow others and get notified when they post a event</p>
+                            </div>
+                        </div>
+                        <div class="col-md-5 features-tab" onmouseover="bringUp(this)" onmouseout="bringDown(this)">
+                            <!-- Feature item-->
+                            <div class="text-center">
+                                <i class="bi-calendar-event icon-feature text-gradient d-block mb-3"></i>
+                                <h3 class="font-alt">Never miss a thing</h3>
+                                <p class="text-muted mb-0">Set reminders on events that are important to you</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
+</section>
+<!-- Basic features section-->
+<section class="bg-light" id='about'>
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+            <div class="col-12 col-lg-5">
+                <h2 class="display-4 lh-1 mb-4">About Us</h2>
+                <p class="lead fw-normal text-muted mb-5 mb-lg-0">We are dedicated to building a platform where
+                    students can find about all kinds of events to attend. A place for findinng and sharing events
+                    with each
+                    others. It is our core belief that Talent can truely thrive when it has exposure to
+                    Opportunities around them. We want every student to have equal chances of finding opportunities,
+                    no matter which college or enviornment they are in.</p>
+            </div>
+            <div class="col-sm-8 col-md-6">
+                <div class="px-5 px-sm-0">
+                    <!-- <img class="img-fluid rounded-circle"
+                        src="https://findutsav.com/assets/img/Ecological press conference member speaking on stagem.svg"
+                        alt="..." /> -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/kdCkRSFE7ew"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
 
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script>
-        // Get the menu toggle button element
-        var menuToggle = document.querySelector(".menu-toggle");
-        // Get the menu links element
-        var menuLinks = document.querySelector(".menu-links");
-        // Add a click event listener to the menu toggle button
-        menuToggle.addEventListener("click", function () {
-            // Toggle the display of the menu links element
-            menuLinks.classList.toggle("show");
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const square = entry.target.querySelector('.section2');
+
+            if (entry.isIntersecting) {
+                square.classList.add('section2-animation');
+                console.log('added onscroll');
+                return; // if we added the class, exit the function
+            }
+
+            // We're not intersecting, so remove the class!
+            square.classList.remove('section2-animation');
+            console.log('removed onscroll');
+
         });
-    </script>
+    });
+
+    observer.observe(document.querySelector('.section2Container'));
+
+    var bringUp = (div) => {
+        div.classList.add('active')
+    }
+    var bringDown = (div) => {
+        div.classList.remove('active')
+    }
+
+</script>
+<section class="" id="download">
+    <div class="container px-5">
+        <h2 class="text-center display-4 lh-1 mb-4">Join us on</h2>
+        <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+            <a class="me-lg-3 mb-4 mb-lg-0" href="https://play.google.com/store/apps/details?id=com.findutsav"><img
+                    class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
+        </div>
+        <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+            <a class="nav-item btn btn-primary rounded-pill px-3 m-3 mb-lg-0"
+                href="https://t.me/joinchat/HcTFYcrPOjyQsbUj">
+                <span class="d-flex align-items-center">
+                    <i class="bi-telegram me-2"></i>
+                    <span class="small">Telegram Channel</span>
+                </span>
+            </a>
+            <a class="nav-item btn btn-primary rounded-pill px-3 m-3 mb-lg-0"
+                href="https://www.facebook.com/findutsavmedical">
+                <span class="d-flex align-items-center">
+                    <i class="bi-facebook me-2"></i>
+                    <span class="small">Facebook Page</span>
+                </span>
+            </a>
+            <a class="nav-item btn btn-primary rounded-pill px-3 m-3 mb-lg-0"
+                href="https://www.instagram.com/findutsav">
+                <span class="d-flex align-items-center">
+                    <i class="bi-instagram me-2"></i>
+                    <span class="small">Instagram Page</span>
+                </span>
+            </a>
+            <a class="nav-item btn btn-primary rounded-pill px-3 m-3 mb-lg-0"
+                href="https://wa.me/message/Y3HGLJJ7B3LUK1">
+                <span class="d-flex align-items-center">
+                    <i class="bi-whatsapp me-2"></i>
+                    <span class="small">Whatsapp Group</span>
+                </span>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- Feedback Modal-->
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-gradient-primary-to-secondary p-4">
+                <h5 class="modal-title font-alt text-white" id="feedbackModalLabel">Contact Us</h5>
+                <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body border-0 p-4">
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- * * SB Forms Contact Form * *-->
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- This form is pre-integrated with SB Forms.-->
+                <!-- To make this form functional, sign up at-->
+                <!-- https://startbootstrap.com/solution/contact-forms-->
+                <!-- to get an API token!-->
+                <form id="contactForm" target="none" method="POST" action='https://findutsav.com/contact-us'>
+                    <!-- Name input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="name" type="text" placeholder="Enter your name..."
+                            data-sb-validations="required" />
+                        <label for="name">Full name</label>
+                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                    </div>
+                    <!-- Email address input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="email" type="email" placeholder="name@example.com"
+                            data-sb-validations="required,email" />
+                        <label for="email">Email address</label>
+                        <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                        <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                    </div>
+                    <!-- Phone number input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"
+                            data-sb-validations="required" />
+                        <label for="phone">Phone number</label>
+                        <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
+                        </div>
+                    </div>
+                    <!-- Message input-->
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..."
+                            style="height: 10rem" data-sb-validations="required"></textarea>
+                        <label for="message">Message</label>
+                        <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
+                        </div>
+                    </div>
+                    <!-- Submit success message-->
+                    <!---->
+                    <!-- This is what your users will see when the form-->
+                    <!-- has successfully submitted-->
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center mb-3">
+                            <div class="fw-bolder">Thank you for connecting with us! We will get back to you shortly
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Submit error message-->
+                    <!---->
+                    <!-- This is what your users will see when there is-->
+                    <!-- an error submitting the form-->
+                    <div class="d-none" id="submitErrorMessage">
+                        <div class="text-center text-danger mb-3">Error sending message!</div>
+                    </div>
+                    <!-- Submit Button-->
+                    <div class="d-grid"><button class="btn btn-primary rounded-pill btn-lg" id="submitButton"
+                            type="submit">Submit</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="bg-black text-center py-5">
+    <div class="container px-5">
+        <div class="text-white-50 small">
+            <div class="mb-2">&copy; Your Website 2021. All Rights Reserved.</div>
+            <a href="https://findutsav.com/privacy">Privacy</a>
+            <span class="mx-1">&middot;</span>
+            <a href="#!">Terms</a>
+        </div>
+    </div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+
+<script src="https://use.fontawesome.com/17455b8dda.js"></script>
 </body>
 
 </html>
